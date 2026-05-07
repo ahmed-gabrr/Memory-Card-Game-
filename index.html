@@ -1,0 +1,55 @@
+<!-- Start Screen / Menu -->
+<div id="startScreen" class="screen">
+  <h2>Welcome to the Game</h2>
+
+  <button class="help-btn" onclick="openRules()">?</button>
+
+  <div class="player-section">
+    <h3>Player Information</h3>
+    <input 
+      id="playerName" 
+      class="player-input" 
+      type="text" 
+      placeholder="Enter your name" 
+      maxlength="20" 
+    />
+    <p id="playerWarning" class="player-warning"></p>
+  </div>
+
+  <div class="theme-section">
+    <h3>Choose Card Theme</h3>
+
+    <div id="themeSelector" class="theme-selector">
+      <div class="theme-card selected" data-theme="fruits" onclick="selectTheme(this)">
+        <div class="theme-icon">🍎</div>
+        <span>Fruits</span>
+      </div>
+
+      <div class="theme-card" data-theme="animals" onclick="selectTheme(this)">
+        <div class="theme-icon">🐶</div>
+        <span>Animals</span>
+      </div>
+
+      <div class="theme-card" data-theme="numbers" onclick="selectTheme(this)">
+        <div class="theme-icon">🔢</div>
+        <span>Numbers</span>
+      </div>
+    </div>
+  </div>
+
+  <button onclick="startGame()">Start Game</button>
+</div>
+
+
+<!-- How to Play Popup -->
+<div id="rulesPopup" class="popup hidden" onclick="closeRulesByBackground(event)">
+  <div class="popup-content">
+    <h2>How to play</h2>
+    <p>1. Click on two cards to flip them.</p>
+    <p>2. If the cards match, they stay open.</p>
+    <p>3. If they do not match, they flip back.</p>
+    <p>4. Complete all pairs to move to the next level.</p>
+    <p>5. Each level has more cards and less time.</p>
+    <button onclick="closeRules()">Close</button>
+  </div>
+</div>
