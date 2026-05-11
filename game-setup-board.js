@@ -34,16 +34,25 @@ function loadLevel() {
   matchedPairs = 0;
   extraTimeUsed = false;
 
-  if (level === 1) {
-    totalPairs = 4;
-    timeLeft = 60;
-  } else if (level === 2) {
-    totalPairs = 6;
-    timeLeft = 50;
-  } else {
-    totalPairs = 8;
-    timeLeft = 40;
-  }
+ if (level === 1) {
+  totalPairs = 4;   // 8 cards
+  timeLeft = 60;
+} else if (level === 2) {
+  totalPairs = 6;   // 12 cards
+  timeLeft = 53;
+} else if (level === 3) {
+  totalPairs = 8;   // 16 cards
+  timeLeft = 46;
+} else if (level === 4) {
+  totalPairs = 8;   // 16 cards
+  timeLeft = 39;
+} else if (level === 5) {
+  totalPairs = 8;   // 16 cards
+  timeLeft = 32;
+} else if (level === 6) {
+  totalPairs = 8;   // 16 cards
+  timeLeft = 25;
+}
 
   updateInfo();
   document.getElementById("gameMessage").textContent = "";

@@ -15,10 +15,12 @@ function startTimer() {
 function levelCompleted() {
   clearInterval(timer);
 
-  if (level >= 3) {
+  if (level >= 6) {
     endGame(true);
   } else {
-    document.getElementById("gameMessage").textContent = "Level Completed! Moving to next level...";
+    document.getElementById("gameMessage").textContent =
+      "Level Completed! Moving to next level...";
+
     level++;
 
     setTimeout(() => {
